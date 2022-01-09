@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="320" id="KGk-i7-Jjw" customClass="BestActorTableViewCell" customModule="MovieViewImplemenatation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="387" height="320"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="387" height="320"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Actors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFx-9k-ZFa">
+                        <rect key="frame" x="16" y="16" width="85.5" height="23"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Actors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhq-qM-dib">
+                        <rect key="frame" x="274.5" y="16.5" width="96.5" height="22.5"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                        <color key="textColor" name="Color_white"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IRC-m8-dQi">
+                        <rect key="frame" x="10" y="64" width="367" height="240"/>
+                        <color key="backgroundColor" name="Color_primary"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="240" id="CAd-Sb-zaT"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="Grl-cq-XTO">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <color key="backgroundColor" name="Color_primary"/>
+                <constraints>
+                    <constraint firstItem="LFx-9k-ZFa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="48Y-jE-P1G"/>
+                    <constraint firstAttribute="bottom" secondItem="IRC-m8-dQi" secondAttribute="bottom" constant="16" id="Ewm-DJ-ECH"/>
+                    <constraint firstAttribute="trailing" secondItem="rhq-qM-dib" secondAttribute="trailing" constant="16" id="O4t-qN-zqY"/>
+                    <constraint firstItem="IRC-m8-dQi" firstAttribute="top" secondItem="LFx-9k-ZFa" secondAttribute="bottom" constant="25" id="m8E-5k-4sM"/>
+                    <constraint firstItem="IRC-m8-dQi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="nzR-R8-XhR"/>
+                    <constraint firstItem="rhq-qM-dib" firstAttribute="centerY" secondItem="LFx-9k-ZFa" secondAttribute="centerY" id="oXx-LT-bBL"/>
+                    <constraint firstAttribute="trailing" secondItem="IRC-m8-dQi" secondAttribute="trailing" constant="10" id="t07-GK-VR6"/>
+                    <constraint firstItem="LFx-9k-ZFa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="wPw-zc-XpZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="BestActorsCollectionView" destination="IRC-m8-dQi" id="mqw-Hu-gr6"/>
+                <outlet property="lbl_MoreActors" destination="rhq-qM-dib" id="whD-2D-CxL"/>
+            </connections>
+            <point key="canvasLocation" x="-45.652173913043484" y="238.39285714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Color_primary">
+            <color red="0.0" green="0.12200000137090683" blue="0.17599999904632568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color_white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

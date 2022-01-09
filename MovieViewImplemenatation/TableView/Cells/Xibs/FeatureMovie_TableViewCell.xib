@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="406" id="KGk-i7-Jjw" customClass="FeatureMovie_TableViewCell" customModule="MovieViewImplemenatation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="397" height="406"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="397" height="406"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Anime Collection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqR-uz-9lb">
+                        <rect key="frame" x="20" y="10" width="196" height="51"/>
+                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="hOP-g4-d6K">
+                        <rect key="frame" x="10" y="66" width="377" height="340"/>
+                        <color key="backgroundColor" name="Color_primary"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="340" id="SkP-vV-dQs"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="Vp9-u7-kWJ">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <color key="backgroundColor" name="Color_primary"/>
+                <constraints>
+                    <constraint firstItem="UqR-uz-9lb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="0Gm-2q-3Bl"/>
+                    <constraint firstAttribute="trailing" secondItem="hOP-g4-d6K" secondAttribute="trailing" constant="10" id="Aay-Fu-zGS"/>
+                    <constraint firstItem="hOP-g4-d6K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Nal-rC-lRL"/>
+                    <constraint firstItem="hOP-g4-d6K" firstAttribute="top" secondItem="UqR-uz-9lb" secondAttribute="bottom" constant="5" id="OSn-Gj-Fng"/>
+                    <constraint firstItem="UqR-uz-9lb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="pEz-gT-y7E"/>
+                    <constraint firstAttribute="bottom" secondItem="hOP-g4-d6K" secondAttribute="bottom" id="rMg-xh-bfd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.098039215690000001" green="0.27058823529999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="featureMovieList" destination="hOP-g4-d6K" id="741-Te-dj8"/>
+                <outlet property="labelForBestMovie" destination="UqR-uz-9lb" id="CPH-ff-mOh"/>
+                <outlet property="lb_Caption" destination="UqR-uz-9lb" id="NA9-XV-Az3"/>
+            </connections>
+            <point key="canvasLocation" x="165.94202898550725" y="214.28571428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Color_primary">
+            <color red="0.0" green="0.12200000137090683" blue="0.17599999904632568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
